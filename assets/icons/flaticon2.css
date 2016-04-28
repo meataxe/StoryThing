@@ -1,0 +1,35 @@
+	/*
+  	Flaticon2 icon font: Flaticon2
+  	Creation date: 27/04/2016 09:58
+  	*/
+
+@font-face {
+  font-family: "Flaticon2";
+  src: url("./Flaticon2.eot");
+  src: url("./Flaticon2.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon2.woff") format("woff"),
+       url("./Flaticon2.ttf") format("truetype"),
+       url("./Flaticon2.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon2";
+    src: url("./Flaticon2.svg#Flaticon2") format("svg");
+  }
+}
+
+[class^="flaticon2-"]:before, [class*=" flaticon2-"]:before,
+[class^="flaticon2-"]:after, [class*=" flaticon2-"]:after {   
+  font-family: Flaticon2;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon2-hiker:before { content: "\f100"; }
+.flaticon2-right-arrow:before { content: "\f101"; }
+.flaticon2-storm:before { content: "\f102"; }
+.flaticon2-ufo:before { content: "\f103"; }

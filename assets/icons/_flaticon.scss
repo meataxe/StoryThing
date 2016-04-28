@@ -1,0 +1,139 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 27/04/2016 09:54
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-animal:before { content: "\f100"; }
+.flaticon-animal-1:before { content: "\f101"; }
+.flaticon-animals:before { content: "\f102"; }
+.flaticon-animals-1:before { content: "\f103"; }
+.flaticon-animals-2:before { content: "\f104"; }
+.flaticon-animals-3:before { content: "\f105"; }
+.flaticon-back:before { content: "\f106"; }
+.flaticon-book:before { content: "\f107"; }
+.flaticon-boy-with-sadness-face:before { content: "\f108"; }
+.flaticon-city:before { content: "\f109"; }
+.flaticon-clock:before { content: "\f10a"; }
+.flaticon-compass:before { content: "\f10b"; }
+.flaticon-creepy:before { content: "\f10c"; }
+.flaticon-food:before { content: "\f10d"; }
+.flaticon-fountain:before { content: "\f10e"; }
+.flaticon-fruit:before { content: "\f10f"; }
+.flaticon-game:before { content: "\f110"; }
+.flaticon-globe:before { content: "\f111"; }
+.flaticon-hand-drawn-shooting-star:before { content: "\f112"; }
+.flaticon-happy-and-sad-masks:before { content: "\f113"; }
+.flaticon-home:before { content: "\f114"; }
+.flaticon-key:before { content: "\f115"; }
+.flaticon-key-1:before { content: "\f116"; }
+.flaticon-light:before { content: "\f117"; }
+.flaticon-lock:before { content: "\f118"; }
+.flaticon-monuments:before { content: "\f119"; }
+.flaticon-moon:before { content: "\f11a"; }
+.flaticon-multimedia:before { content: "\f11b"; }
+.flaticon-nature:before { content: "\f11c"; }
+.flaticon-nature-1:before { content: "\f11d"; }
+.flaticon-nature-2:before { content: "\f11e"; }
+.flaticon-paratrooper:before { content: "\f11f"; }
+.flaticon-people:before { content: "\f120"; }
+.flaticon-people-1:before { content: "\f121"; }
+.flaticon-phone-call:before { content: "\f122"; }
+.flaticon-question:before { content: "\f123"; }
+.flaticon-road:before { content: "\f124"; }
+.flaticon-scales-of-justice:before { content: "\f125"; }
+.flaticon-search:before { content: "\f126"; }
+.flaticon-shape:before { content: "\f127"; }
+.flaticon-stop:before { content: "\f128"; }
+.flaticon-summer:before { content: "\f129"; }
+.flaticon-technology:before { content: "\f12a"; }
+.flaticon-tent:before { content: "\f12b"; }
+.flaticon-tool:before { content: "\f12c"; }
+.flaticon-tool-1:before { content: "\f12d"; }
+.flaticon-transport:before { content: "\f12e"; }
+.flaticon-view:before { content: "\f12f"; }
+.flaticon-weapon:before { content: "\f130"; }
+.flaticon-witch:before { content: "\f131"; }
+    
+    $font-Flaticon-animal: "\f100";
+    $font-Flaticon-animal-1: "\f101";
+    $font-Flaticon-animals: "\f102";
+    $font-Flaticon-animals-1: "\f103";
+    $font-Flaticon-animals-2: "\f104";
+    $font-Flaticon-animals-3: "\f105";
+    $font-Flaticon-back: "\f106";
+    $font-Flaticon-book: "\f107";
+    $font-Flaticon-boy-with-sadness-face: "\f108";
+    $font-Flaticon-city: "\f109";
+    $font-Flaticon-clock: "\f10a";
+    $font-Flaticon-compass: "\f10b";
+    $font-Flaticon-creepy: "\f10c";
+    $font-Flaticon-food: "\f10d";
+    $font-Flaticon-fountain: "\f10e";
+    $font-Flaticon-fruit: "\f10f";
+    $font-Flaticon-game: "\f110";
+    $font-Flaticon-globe: "\f111";
+    $font-Flaticon-hand-drawn-shooting-star: "\f112";
+    $font-Flaticon-happy-and-sad-masks: "\f113";
+    $font-Flaticon-home: "\f114";
+    $font-Flaticon-key: "\f115";
+    $font-Flaticon-key-1: "\f116";
+    $font-Flaticon-light: "\f117";
+    $font-Flaticon-lock: "\f118";
+    $font-Flaticon-monuments: "\f119";
+    $font-Flaticon-moon: "\f11a";
+    $font-Flaticon-multimedia: "\f11b";
+    $font-Flaticon-nature: "\f11c";
+    $font-Flaticon-nature-1: "\f11d";
+    $font-Flaticon-nature-2: "\f11e";
+    $font-Flaticon-paratrooper: "\f11f";
+    $font-Flaticon-people: "\f120";
+    $font-Flaticon-people-1: "\f121";
+    $font-Flaticon-phone-call: "\f122";
+    $font-Flaticon-question: "\f123";
+    $font-Flaticon-road: "\f124";
+    $font-Flaticon-scales-of-justice: "\f125";
+    $font-Flaticon-search: "\f126";
+    $font-Flaticon-shape: "\f127";
+    $font-Flaticon-stop: "\f128";
+    $font-Flaticon-summer: "\f129";
+    $font-Flaticon-technology: "\f12a";
+    $font-Flaticon-tent: "\f12b";
+    $font-Flaticon-tool: "\f12c";
+    $font-Flaticon-tool-1: "\f12d";
+    $font-Flaticon-transport: "\f12e";
+    $font-Flaticon-view: "\f12f";
+    $font-Flaticon-weapon: "\f130";
+    $font-Flaticon-witch: "\f131";
