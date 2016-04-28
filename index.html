@@ -51,14 +51,14 @@
         </div>        
       </div>
     </div>
-    <div class="row faces-row hidden-xs hidden-sm">
+    <div class="row images-row hidden-xs hidden-sm">
     </div>
-    <div class="row faces-row hidden-md hidden-lg">
+    <div class="row images-row hidden-md hidden-lg">
     </div>    
     <div class="row">
-      <div class="col-xs-12 faces hidden-xs hidden-sm">
+      <div class="col-xs-12 images hidden-xs hidden-sm">
       </div>
-      <div class="col-xs-12 faces hidden-md hidden-lg">
+      <div class="col-xs-12 images hidden-md hidden-lg">
       </div>      
     </div>
   </div>
@@ -73,7 +73,7 @@
   </footer>
   
   <script id="dice" type="text/template">
-    <div class="face-container img-thumbnail">
+    <div class="image-container img-thumbnail">
       <span class="#=class# icon" title="#=title#" aria-hidden="true"></span>
     </div>      
   </script>  
@@ -101,52 +101,52 @@
       padding-top: 5px;      
     }  
 
-    .faces-row.hidden-xs {
+    .images-row.hidden-xs {
       margin-top: 50px;
     }
     
-    .faces-row.hidden-lg {
+    .images-row.hidden-lg {
       margin-top: 30px;
     }
   
-    .faces.hidden-xs [class^="flaticon-"]::before, 
-    .faces.hidden-xs [class*=" flaticon-"]::before, 
-    .faces.hidden-xs [class^="flaticon-"]::after, 
-    .faces.hidden-xs [class*=" flaticon-"]::after {
+    .images.hidden-xs [class^="flaticon-"]::before, 
+    .images.hidden-xs [class*=" flaticon-"]::before, 
+    .images.hidden-xs [class^="flaticon-"]::after, 
+    .images.hidden-xs [class*=" flaticon-"]::after {
       font-family: Flaticon;
       font-size: 60px;
     }
 
-    .faces.hidden-xs [class^="flaticon2-"]::before, 
-    .faces.hidden-xs [class*=" flaticon2-"]::before, 
-    .faces.hidden-xs [class^="flaticon2-"]::after, 
-    .faces.hidden-xs [class*=" flaticon2-"]::after {
+    .images.hidden-xs [class^="flaticon2-"]::before, 
+    .images.hidden-xs [class*=" flaticon2-"]::before, 
+    .images.hidden-xs [class^="flaticon2-"]::after, 
+    .images.hidden-xs [class*=" flaticon2-"]::after {
       font-family: Flaticon2;
       font-size: 60px;
     }     
 
-    .faces.hidden-lg [class^="flaticon-"]::before, 
-    .faces.hidden-lg [class*=" flaticon-"]::before, 
-    .faces.hidden-lg [class^="flaticon-"]::after, 
-    .faces.hidden-lg [class*=" flaticon-"]::after {
+    .images.hidden-lg [class^="flaticon-"]::before, 
+    .images.hidden-lg [class*=" flaticon-"]::before, 
+    .images.hidden-lg [class^="flaticon-"]::after, 
+    .images.hidden-lg [class*=" flaticon-"]::after {
       font-family: Flaticon;
       font-size: 40px;
     }
 
-    .faces.hidden-lg [class^="flaticon2-"]::before, 
-    .faces.hidden-lg [class*=" flaticon2-"]::before, 
-    .faces.hidden-lg [class^="flaticon2-"]::after, 
-    .faces.hidden-lg [class*=" flaticon2-"]::after {
+    .images.hidden-lg [class^="flaticon2-"]::before, 
+    .images.hidden-lg [class*=" flaticon2-"]::before, 
+    .images.hidden-lg [class^="flaticon2-"]::after, 
+    .images.hidden-lg [class*=" flaticon2-"]::after {
       font-family: Flaticon2;
       font-size: 40px;
     }      
     
-    .faces {
+    .images {
       width: 100%;
       text-align: center;
     }
     
-    .faces .face-container {
+    .images .image-container {
       position: relative;
       text-align: center;
       border-width: 3px;
@@ -154,18 +154,18 @@
       display: inline-block;
     }
   
-    .faces.hidden-xs .face-container {
+    .images.hidden-xs .image-container {
       height: 90px;
       width: 90px;
       margin-right: 10px;
     }
     
-    .faces.hidden-lg .face-container {
+    .images.hidden-lg .image-container {
       height: 60px;
       width: 60px;      
     }
  
-    .faces.hidden-xs .face-container.img-thumbnail span {
+    .images.hidden-xs .image-container.img-thumbnail span {
       position: absolute;
       top: 50%;
       left: 0;
@@ -174,7 +174,7 @@
       margin-left: -20px;
     }
 
-    .faces.hidden-lg .face-container.img-thumbnail span {
+    .images.hidden-lg .image-container.img-thumbnail span {
       position: absolute;
       top: 50%;
       left: 0;
@@ -210,33 +210,32 @@
       return shuffled.slice(min);
     }  
     
-    function showFaces(diceCount) {
+    function showImages(imageCount) {
       var 
         template = $("#dice").text();
-        diceCount = diceCount || getRandomInt(3, 9),
-        selectedDice = getRandomArrayElements(dice, diceCount);
+        imageCount = imageCount || getRandomInt(3, 9),
+        selectedImages = getRandomArrayElements(images, imageCount);
       
-      $(".faces").html("");       
+      $(".images").html("");
       
-      selectedDice.forEach(function (selected) {
-        var face = getRandomArrayElements(selected.faces, 1)[0];            
-        $(".faces").append(renderTemplate(template, face));         
-      });    
+      selectedImages.forEach(function (image) {
+        $(".images").append(renderTemplate(template, image));                        
+      });
     }
   
     $("document").ready(function () {
-      showFaces();
+      showImages();
         
       $('.btn-group a').click(function(e) {
         var $this = $(this),
-             diceCount = $this.attr("href").replace("#", "");
+             imageCount = $this.attr("href").replace("#", "");
         
         $('.btn-group a.btn-primary').removeClass('btn-primary').addClass('btn-default');        
         if (!$this.hasClass('btn-primary')) {
           $this.addClass('btn-primary');
         }
         
-        showFaces(diceCount);
+        showImages(imageCount);
         
         e.preventDefault();
       });    
