@@ -4,6 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Story Thing</title>
+  <link rel="stylesheet" type="text/css" href="assets/icons/flaticon.css">
+  <link rel="stylesheet" type="text/css" href="assets/icons/flaticon2.css">
+  <script src="assets/scripts/dice.js"></script>  
+  
   <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -38,16 +42,7 @@
       </div>
     </div>
     <div class="row" style="margin-top: 50px;">
-      <div class="col-lg-12">
-        <div class="face-container img-thumbnail">
-          <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-        </div>
-        <div class="face-container img-thumbnail">
-          <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
-        </div>
-        <div class="face-container img-thumbnail">
-          <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
-        </div>
+      <div class="col-lg-12" id="faces">
       </div>
     </div>
   </div>
@@ -60,23 +55,48 @@
       </div>
     </div>
   </footer>
+  
+  <script id="dice" type="text/template">
+    <div class="face-container img-thumbnail">
+      <span class="#=class# icon" title="#=title#" aria-hidden="true"></span>
+    </div>    
+  </script>  
    
   <style>
+    [class^="flaticon-"]::before, [class*=" flaticon-"]::before, [class^="flaticon-"]::after, [class*=" flaticon-"]::after {
+      font-family: Flaticon;
+      font-size: 60px;
+    }
+
+    [class^="flaticon2-"]::before, [class*=" flaticon2-"]::before, [class^="flaticon2-"]::after, [class*=" flaticon2-"]::after {
+      font-family: Flaticon2;
+      font-size: 60px;
+    }  
+    
+    #faces {
+      width: 100%;
+      text-align: center;
+    }
+  
     .face-container {
       height: 90px;
       width: 90px;
       position: relative;
       text-align: center;
       margin-right: 20px;
+      border-width: 3px;
+      border-color: #A9A9A9;
+      display: inline-block;
     }
   
-    .face-container.img-thumbnail span.glyphicon {
+    .face-container.img-thumbnail span {
       font-size: 60px;
       position: absolute;
       top: 50%;
       left: 0;
       right: 0;
-      margin-top: -30px;      
+      margin-top: -43px;      
+      margin-left: -20px;
     }    
     
     .footer {
@@ -91,15 +111,63 @@
       text-align: center;      
     }    
   </style>
-    
+
+
+  
   <script>
+    function renderTemplate (templateText, model) {
+      for (var prop in model) {
+        templateText = templateText.replace("#=" + prop + "#", model[prop]);
+      }
+      
+      return templateText;
+    }
+    
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    
+    function getRandomArrayElements(arr, count) {
+      var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+      
+      while (i-- > min) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+      }
+      
+      return shuffled.slice(min);
+    }  
+    
+    function showFaces(diceCount) {
+      var 
+        template = $("#dice").text();
+        diceCount = diceCount || getRandomInt(3, 9),
+        selectedDice = getRandomArrayElements(dice, diceCount);
+      
+      $("#faces").html("");  
+      
+      selectedDice.forEach(function (selected) {
+        var face = getRandomArrayElements(selected.faces, 1)[0];          
+        $("#faces").append(renderTemplate(template, face));  
+      });    
+    }
+  
     $("document").ready(function () {
+      showFaces();
+        
       $('.btn-group a').click(function(e) {
-        $('.btn-group a.btn-primary').removeClass('btn-primary').addClass('btn-default');
-        var $this = $(this);
+        var $this = $(this),
+             diceCount = $this.attr("href").replace("#", "");
+        
+        $('.btn-group a.btn-primary').removeClass('btn-primary').addClass('btn-default');        
         if (!$this.hasClass('btn-primary')) {
-            $this.addClass('btn-primary');
+          $this.addClass('btn-primary');
         }
+        
+        showFaces(diceCount);
+        
         e.preventDefault();
       });    
     });      
