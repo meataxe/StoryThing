@@ -83,7 +83,7 @@ var images = [
   {      title:"lollipop",      class:"flaticon4-lollipop"    },    
   {      title:"magic wand",      class:"flaticon-witch"    },    
   {      title:"magnet",      class:"flaticon-tool-1"    },    
-  {      title:"magnifying glass",      class:"flaticon-search"    },    
+  {      title:"magnifying glass",      class:"flaticon-search"    },   
   {      title:"meteorite falling",      class:"flaticon4-meteorite-falling"    },    
   {      title:"michelangelo nunchakus",      class:"flaticon3-michelangelo-nunchakus"    },    
   {      title:"mixer",      class:"flaticon4-mixer"    },    
