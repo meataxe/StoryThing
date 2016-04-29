@@ -1,0 +1,81 @@
+	/*
+  	Flaticon4 icon font: Flaticon4
+  	Creation date: 29/04/2016 02:06
+  	*/
+
+@font-face {
+  font-family: "Flaticon4";
+  src: url("./Flaticon4.eot");
+  src: url("./Flaticon4.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon4.woff") format("woff"),
+       url("./Flaticon4.ttf") format("truetype"),
+       url("./Flaticon4.svg#Flaticon4") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon4";
+    src: url("./Flaticon4.svg#Flaticon4") format("svg");
+  }
+}
+
+[class^="flaticon4-"]:before, [class*=" flaticon4-"]:before,
+[class^="flaticon4-"]:after, [class*=" flaticon4-"]:after {   
+  font-family: Flaticon4;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon4-automobile:before { content: "\f100"; }
+.flaticon4-bicycle:before { content: "\f101"; }
+.flaticon4-birthday-cake:before { content: "\f102"; }
+.flaticon4-burning-home:before { content: "\f103"; }
+.flaticon4-bus:before { content: "\f104"; }
+.flaticon4-cannon:before { content: "\f105"; }
+.flaticon4-car:before { content: "\f106"; }
+.flaticon4-circus-elephant:before { content: "\f107"; }
+.flaticon4-circus-seal:before { content: "\f108"; }
+.flaticon4-cloudy:before { content: "\f109"; }
+.flaticon4-clown-with-hat:before { content: "\f10a"; }
+.flaticon4-cold:before { content: "\f10b"; }
+.flaticon4-cooking:before { content: "\f10c"; }
+.flaticon4-crane:before { content: "\f10d"; }
+.flaticon4-cup:before { content: "\f10e"; }
+.flaticon4-dark-night:before { content: "\f10f"; }
+.flaticon4-dump-truck:before { content: "\f110"; }
+.flaticon4-fire:before { content: "\f111"; }
+.flaticon4-hamburger:before { content: "\f112"; }
+.flaticon4-handcuffs:before { content: "\f113"; }
+.flaticon4-hills:before { content: "\f114"; }
+.flaticon4-hose:before { content: "\f115"; }
+.flaticon4-hot-dog-with-sauce-and-bread:before { content: "\f116"; }
+.flaticon4-hot-drink:before { content: "\f117"; }
+.flaticon4-ice-cream:before { content: "\f118"; }
+.flaticon4-jail:before { content: "\f119"; }
+.flaticon4-lollipop:before { content: "\f11a"; }
+.flaticon4-meteorite-falling:before { content: "\f11b"; }
+.flaticon4-mixer:before { content: "\f11c"; }
+.flaticon4-mountains:before { content: "\f11d"; }
+.flaticon4-parcel:before { content: "\f11e"; }
+.flaticon4-pizza:before { content: "\f11f"; }
+.flaticon4-police-badge:before { content: "\f120"; }
+.flaticon4-prize:before { content: "\f121"; }
+.flaticon4-rain:before { content: "\f122"; }
+.flaticon4-reed:before { content: "\f123"; }
+.flaticon4-road-perspective-of-curves:before { content: "\f124"; }
+.flaticon4-rocket:before { content: "\f125"; }
+.flaticon4-sandwich:before { content: "\f126"; }
+.flaticon4-satellite:before { content: "\f127"; }
+.flaticon4-saturn:before { content: "\f128"; }
+.flaticon4-snack:before { content: "\f129"; }
+.flaticon4-sputnik:before { content: "\f12a"; }
+.flaticon4-sun:before { content: "\f12b"; }
+.flaticon4-telescope:before { content: "\f12c"; }
+.flaticon4-treasure:before { content: "\f12d"; }
+.flaticon4-truck:before { content: "\f12e"; }
+.flaticon4-truck-1:before { content: "\f12f"; }
+.flaticon4-unicorn:before { content: "\f130"; }
+.flaticon4-water:before { content: "\f131"; }

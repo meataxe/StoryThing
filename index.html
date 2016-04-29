@@ -5,13 +5,17 @@
   <title>Story Thing</title>
   <link rel="stylesheet" type="text/css" href="assets/icons/flaticon.css">
   <link rel="stylesheet" type="text/css" href="assets/icons/flaticon2.css">
+  <link rel="stylesheet" type="text/css" href="assets/icons/flaticon3.css">
+  <link rel="stylesheet" type="text/css" href="assets/icons/flaticon4.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/site.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/flaticon-responsive.css">
   <script src="assets/scripts/dice.js"></script>  
   
   <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="index-page">
   <div class="container body-content">
     <div class="row">
       <div class="col-xs-12">
@@ -51,14 +55,14 @@
         </div>        
       </div>
     </div>
-    <div class="row faces-row hidden-xs hidden-sm">
+    <div class="row images-row hidden-xs hidden-sm">
     </div>
-    <div class="row faces-row hidden-md hidden-lg">
+    <div class="row images-row hidden-md hidden-lg">
     </div>    
     <div class="row">
-      <div class="col-xs-12 faces hidden-xs hidden-sm">
+      <div class="col-xs-12 images hidden-xs hidden-sm">
       </div>
-      <div class="col-xs-12 faces hidden-md hidden-lg">
+      <div class="col-xs-12 images hidden-md hidden-lg">
       </div>      
     </div>
   </div>
@@ -66,125 +70,20 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">    
-          <p class="text-muted"><a href="https://github.com/meataxe/StoryThing">GitHub Repo</a></p>
+          <p class="text-muted">
+            <a href="./icons.html">Font Attribution</a>            
+            | <a href="https://github.com/meataxe/StoryThing">GitHub Repo</a>
+          </p>
         </div>
       </div>
     </div>
   </footer>
   
   <script id="dice" type="text/template">
-    <div class="face-container img-thumbnail">
+    <div class="image-container img-thumbnail">
       <span class="#=class# icon" title="#=title#" aria-hidden="true"></span>
     </div>      
   </script>  
-   
-  <style>
-    html {
-      position: relative;
-      min-height: 100%;
-    }
-
-    body {
-      margin-bottom: 60px;
-    }
-    
-    .footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 30px;
-      background-color: #f5f5f5;      
-    }   
-
-    .footer p {
-      text-align: center;  
-      padding-top: 5px;      
-    }  
-
-    .faces-row.hidden-xs {
-      margin-top: 50px;
-    }
-    
-    .faces-row.hidden-lg {
-      margin-top: 30px;
-    }
-  
-    .faces.hidden-xs [class^="flaticon-"]::before, 
-    .faces.hidden-xs [class*=" flaticon-"]::before, 
-    .faces.hidden-xs [class^="flaticon-"]::after, 
-    .faces.hidden-xs [class*=" flaticon-"]::after {
-      font-family: Flaticon;
-      font-size: 60px;
-    }
-
-    .faces.hidden-xs [class^="flaticon2-"]::before, 
-    .faces.hidden-xs [class*=" flaticon2-"]::before, 
-    .faces.hidden-xs [class^="flaticon2-"]::after, 
-    .faces.hidden-xs [class*=" flaticon2-"]::after {
-      font-family: Flaticon2;
-      font-size: 60px;
-    }     
-
-    .faces.hidden-lg [class^="flaticon-"]::before, 
-    .faces.hidden-lg [class*=" flaticon-"]::before, 
-    .faces.hidden-lg [class^="flaticon-"]::after, 
-    .faces.hidden-lg [class*=" flaticon-"]::after {
-      font-family: Flaticon;
-      font-size: 40px;
-    }
-
-    .faces.hidden-lg [class^="flaticon2-"]::before, 
-    .faces.hidden-lg [class*=" flaticon2-"]::before, 
-    .faces.hidden-lg [class^="flaticon2-"]::after, 
-    .faces.hidden-lg [class*=" flaticon2-"]::after {
-      font-family: Flaticon2;
-      font-size: 40px;
-    }      
-    
-    .faces {
-      width: 100%;
-      text-align: center;
-    }
-    
-    .faces .face-container {
-      position: relative;
-      text-align: center;
-      border-width: 3px;
-      border-color: #A9A9A9;
-      display: inline-block;
-    }
-  
-    .faces.hidden-xs .face-container {
-      height: 90px;
-      width: 90px;
-      margin-right: 10px;
-    }
-    
-    .faces.hidden-lg .face-container {
-      height: 60px;
-      width: 60px;      
-    }
- 
-    .faces.hidden-xs .face-container.img-thumbnail span {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      margin-top: -43px;      
-      margin-left: -20px;
-    }
-
-    .faces.hidden-lg .face-container.img-thumbnail span {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      margin-top: -30px;      
-      margin-left: -20px;
-    }    
-  </style>
-
-
   
   <script>
     function renderTemplate (templateText, model) {
@@ -212,33 +111,32 @@
       return shuffled.slice(min);
     }  
     
-    function showFaces(diceCount) {
+    function showImages(imageCount) {
       var 
-        template = $("#dice").text();
-        diceCount = diceCount || getRandomInt(3, 9),
-        selectedDice = getRandomArrayElements(dice, diceCount);
+        template = $("#dice").text(),
+        imageCount = imageCount || getRandomInt(3, 9),
+        selectedImages = getRandomArrayElements(images, imageCount);
       
-      $(".faces").html("");       
+      $(".images").html("");
       
-      selectedDice.forEach(function (selected) {
-        var face = getRandomArrayElements(selected.faces, 1)[0];            
-        $(".faces").append(renderTemplate(template, face));         
-      });    
+      selectedImages.forEach(function (image) {
+        $(".images").append(renderTemplate(template, image));                        
+      });
     }
   
     $("document").ready(function () {
-      showFaces();
+      showImages();
         
       $('.btn-group a').click(function(e) {
         var $this = $(this),
-             diceCount = $this.attr("href").replace("#", "");
+             imageCount = $this.attr("href").replace("#", "");
         
         $('.btn-group a.btn-primary').removeClass('btn-primary').addClass('btn-default');        
         if (!$this.hasClass('btn-primary')) {
           $this.addClass('btn-primary');
         }
         
-        showFaces(diceCount);
+        showImages(imageCount);
         
         e.preventDefault();
       });    

@@ -1,0 +1,63 @@
+.images.hidden-xs [class^="flaticon-"]::before, 
+.images.hidden-xs [class*=" flaticon-"]::before, 
+.images.hidden-xs [class^="flaticon-"]::after, 
+.images.hidden-xs [class*=" flaticon-"]::after {
+  font-family: Flaticon;
+  font-size: 60px;
+}
+
+.images.hidden-xs [class^="flaticon2-"]::before, 
+.images.hidden-xs [class*=" flaticon2-"]::before, 
+.images.hidden-xs [class^="flaticon2-"]::after, 
+.images.hidden-xs [class*=" flaticon2-"]::after {
+  font-family: Flaticon2;
+  font-size: 60px;
+}
+
+.images.hidden-xs [class^="flaticon3-"]::before, 
+.images.hidden-xs [class*=" flaticon3-"]::before, 
+.images.hidden-xs [class^="flaticon3-"]::after, 
+.images.hidden-xs [class*=" flaticon3-"]::after {
+  font-family: Flaticon3;
+  font-size: 60px;
+}
+
+.images.hidden-xs [class^="flaticon4-"]::before, 
+.images.hidden-xs [class*=" flaticon4-"]::before, 
+.images.hidden-xs [class^="flaticon4-"]::after, 
+.images.hidden-xs [class*=" flaticon4-"]::after {
+  font-family: Flaticon4;
+  font-size: 60px;
+}    
+
+.images.hidden-lg [class^="flaticon-"]::before, 
+.images.hidden-lg [class*=" flaticon-"]::before, 
+.images.hidden-lg [class^="flaticon-"]::after, 
+.images.hidden-lg [class*=" flaticon-"]::after {
+  font-family: Flaticon;
+  font-size: 40px;
+}
+
+.images.hidden-lg [class^="flaticon2-"]::before, 
+.images.hidden-lg [class*=" flaticon2-"]::before, 
+.images.hidden-lg [class^="flaticon2-"]::after, 
+.images.hidden-lg [class*=" flaticon2-"]::after {
+  font-family: Flaticon2;
+  font-size: 40px;
+}
+
+.images.hidden-lg [class^="flaticon3-"]::before, 
+.images.hidden-lg [class*=" flaticon3-"]::before, 
+.images.hidden-lg [class^="flaticon3-"]::after, 
+.images.hidden-lg [class*=" flaticon3-"]::after {
+  font-family: Flaticon3;
+  font-size: 40px;
+}
+
+.images.hidden-lg [class^="flaticon4-"]::before, 
+.images.hidden-lg [class*=" flaticon4-"]::before, 
+.images.hidden-lg [class^="flaticon4-"]::after, 
+.images.hidden-lg [class*=" flaticon4-"]::after {
+  font-family: Flaticon4;
+  font-size: 40px;
+} 
