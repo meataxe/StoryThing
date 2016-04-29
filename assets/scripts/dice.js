@@ -120,7 +120,7 @@ var images = [
   {      title:"satellite",      class:"flaticon4-satellite"    },    
   //{      title:"satisfied woman",      class:"flaticon3-satisfied-woman"    },    
   {      title:"saturn",      class:"flaticon3-saturn"    },    
-  {      title:"saturn",      class:"flaticon4-saturn"    },    
+  //{      title:"saturn",      class:"flaticon4-saturn"    },    
   {      title:"scales",      class:"flaticon-scales-of-justice"    },    
   {      title:"scientist",      class:"flaticon3-scientist"    },    
   {      title:"shapes",      class:"flaticon3-shapes"    },    
