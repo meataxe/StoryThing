@@ -137,7 +137,7 @@
       });
       
       // log as a google analytics event 
-      ga('send', 'event', 'Refresh Images', 'refresh', isRandom ? 'random' : 'specific-' + imageCount, imageCount);
+      ga('send', 'event', 'Refresh Images', isRandom ? 'random' : 'specific', imageCount);
     }
   
     $("document").ready(function () {
