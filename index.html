@@ -126,6 +126,7 @@
     function showImages(imageCount) {
       var 
         template = $("#dice").text(),
+        isRandom = !((imageCount || 0) > 0),
         imageCount = imageCount || getRandomInt(3, 9),
         selectedImages = getRandomArrayElements(images, imageCount);
       
@@ -134,6 +135,9 @@
       selectedImages.forEach(function (image) {
         $(".images").append(renderTemplate(template, image));                        
       });
+      
+      // log as a google analytics event 
+      ga('send', 'event', 'Refresh Images', 'refresh', isRandom ? 'random' : 'specific', imageCount);
     }
   
     $("document").ready(function () {
