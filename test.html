@@ -1,0 +1,197 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Story Thing</title>
+  <link rel="stylesheet" type="text/css" href="assets/icons/flaticon.css">
+  <link rel="stylesheet" type="text/css" href="assets/icons/flaticon2.css">
+  <script src="assets/scripts/icons.js"></script>  
+  
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container body-content">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>
+          Story Thing 
+          <small>Ideas for Poppy, Finn and Toby's bedtime stories</small>
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <h3><small>Push a button to choose how many things should be in this story...</small></h3>
+      </div>
+      <div class="col-lg-12">        
+        <div class="btn-group btn-group-justified" role="group" aria-label="things">
+          <a class="btn btn-primary" role="button" aria-label="things" href="">???</a>
+          <a class="btn btn-default" role="button" aria-label="things" href="#1">1</a>
+          <a class="btn btn-default" role="button" aria-label="things" href="#2">2</a>
+          <a class="btn btn-default" role="button" aria-label="things" href="#3">3</a>
+          <a class="btn btn-default" role="button" aria-label="things" href="#4">4</a>
+          <a class="btn btn-default" role="button" aria-label="things" href="#5">5</a>
+          <a class="btn btn-default" role="button" aria-label="things" href="#6">6</a>
+          <a class="btn btn-default" role="button" aria-label="things" href="#7">7</a>
+          <a class="btn btn-default" role="button" aria-label="things" href="#8">8</a>
+          <a class="btn btn-default" role="button" aria-label="things" href="#9">9</a>
+        </div>        
+      </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+      <div class="col-lg-12" id="faces">
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">    
+          <p class="text-muted"><a href="https://github.com/meataxe/StoryThing">GitHub Repo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script id="dice" type="text/template">
+    <div class="face-container img-thumbnail">
+      <span class="#=class# icon" title="#=title#" aria-hidden="true"></span>
+    </div>    
+  </script>  
+   
+  <style>
+    [class^="flaticon-"]::before, [class*=" flaticon-"]::before, [class^="flaticon-"]::after, [class*=" flaticon-"]::after {
+      font-family: Flaticon;
+      font-size: 60px;
+    }
+
+    [class^="flaticon2-"]::before, [class*=" flaticon2-"]::before, [class^="flaticon2-"]::after, [class*=" flaticon2-"]::after {
+      font-family: Flaticon2;
+      font-size: 60px;
+    }  
+    
+    #faces {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .face-container {
+      height: 90px;
+      width: 90px;
+      position: relative;
+      text-align: center;
+      margin-right: 20px;
+      border-width: 3px;
+      border-color: #A9A9A9;
+      display: inline-block;
+    }
+  
+    .face-container.img-thumbnail span {
+      font-size: 60px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin-top: -43px;      
+      margin-left: -20px;
+    }    
+    
+    .footer {
+      background-color: #f5f5f5;
+      bottom: 0;
+      height: 60px;
+      position: absolute;
+      width: 100%;
+    }   
+
+    .footer p {
+      text-align: center;      
+    }    
+  </style>
+
+
+  
+  <script>
+    (function () {
+      var THING = THING || {};
+      
+      THING.vm = {
+        allowDupes = false,
+        itemCount = 3,
+        selectedItems = []     // structure: { iconIndex: 0, hold: true } 
+      };
+      
+      THING.getRandomInt = function (min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      };
+      
+      THING.refreshSelection = function (count, currentItems, allItems) {
+        var len = allItems.length - 1;
+        
+        // collect items to hold onto
+        var hold = currentItems.where(i => i.hold === true).take(count);
+        
+        // return if the held selection is the same size as the required number
+        if (hold.length === count) {
+          THING.vm.selectedItems = hold;
+          return;
+        }
+        
+        // if not, pad the remaining with a random selection     
+
+        // get the list of numbers from 0..len
+        // remove the number in hold
+        // randomise their order
+        // take count-hold.length
+        // merge with hold
+        
+        
+        
+        // hard coding option
+        var remaining = count - hold.length;
+        while (remaining-- > 0) {
+          var nextIndex = -1;
+          
+          // get a random int that isn't in the hold list                    
+          while (true) {
+            nextIndex = THING.getRandomInt(0, len - 1);
+            
+            if (hold.all(h => h.iconIndex !== nextIndex) {
+              break;
+            }
+          }
+          
+          // add the item to the list.          
+          hold.push({ iconIndex: nextIndex, hold: false });
+        }
+        
+        
+      };
+      
+      
+      THING.showIcons = function (){};
+      
+      THING.encodeSelection = function (){};
+      
+      
+      /*
+      
+      this one should allow:
+      
+      - click the icon to hold
+      - held items persist refreshes
+      - unclick or change result size to clear a hold
+      - bookmarks via querystring
+      
+      
+      */
+      
+      
+      
+    
+    })();    
+  </script>
+</body>
+</html>
